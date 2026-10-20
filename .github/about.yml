@@ -1,0 +1,24 @@
+# Wat GitHub bovenaan deze repository toont: de beschrijving, de homepage en de topics onder *About*,
+# en of de wiki aanstaat. Dit bestand is waar dat besloten wordt; GitHub toont het alleen.
+#
+# Zetten kan alleen een beheerder van de repository, met de hand: het tandwiel naast *About* op de
+# hoofdpagina voor de beschrijving, de homepage en de topics, en Settings → General → Features →
+# Wikis voor de wiki. De token van Actions mag geen repository-instellingen wijzigen, dus de job
+# `about` in .github/workflows/wiki.yml vergelijkt alleen, en wordt rood na een push naar main
+# zolang GitHub iets anders toont dan dit bestand. Overgenomen van Life-Outdoor-Living/skills.
+#
+# GitHub's grenzen, die .github/scripts/check_about.py offline controleert: beschrijving hooguit
+# 350 tekens, hooguit 20 topics, elk in kleine letters, cijfers en koppeltekens, hooguit 50 tekens.
+#
+# Deze repository is openbaar, en dus ook wat hier en in de wiki staat.
+
+description: >-
+  Het openbare GitHub-profiel van Life Outdoor Living: wie we zijn en hoe we met code, data en AI
+  werken. De repositories zelf zijn alleen toegankelijk voor leden van de organisatie.
+
+# De website van Life Outdoor Living, voor wie het profiel leest zonder lid te zijn.
+homepage: https://www.lifeoutdoorliving.com
+
+topics: []
+
+wiki: true

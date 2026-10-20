@@ -11,8 +11,9 @@ voor leden van de organisatie.
   geschiedenis en een review heeft.
 - **Een wijziging is een pull request.** Hij gaat open zodra het werk begint, en wordt gemerged op
   de dag dat alle controles groen zijn.
-- **Koppelingen lezen alleen.** Een koppeling met een extern systeem krijgt uitsluitend
-  leesrechten. We schrijven niet terug naar de systemen waaruit we lezen.
+- **Koppelingen lezen.** Een koppeling met een extern systeem krijgt alleen leesrechten, en de
+  sleutel staat in een digitale kluis. Een uitzondering bestaat alleen als ze vastgelegd is, met
+  naam en reden; zonder die vastlegging schrijven we niet terug naar de systemen waaruit we lezen.
 - **Geen wachtwoorden of sleutels in code.** Niet in een repository, een issue of een pull request,
   ook niet gedeeltelijk.
 - **Persoonsgegevens worden afgeschermd**, en wie ermee werkt, rapporteert aantallen en nooit
@@ -25,5 +26,8 @@ voor leden van de organisatie.
 Lid van de organisatie en een vraag over toegang of data? Die beantwoorden de beheerders van de
 organisatie.
 
-Heb je een beveiligingsprobleem gevonden? Meld het dan niet in een openbaar issue, maar rechtstreeks
-bij de beheerders van de organisatie.
+Heb je een beveiligingsprobleem gevonden? Meld het dan niet in een issue, pull request of reactie,
+maar rechtstreeks bij de beheerders van de organisatie, via
+[ai@lifeoutdoorliving.com](mailto:ai@lifeoutdoorliving.com), en neem een gevonden wachtwoord of
+sleutel niet over in je melding. Elke repository beschrijft in haar `SECURITY.md` hoe een melding
+verder gaat.
