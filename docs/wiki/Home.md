@@ -7,6 +7,7 @@ privé en alleen toegankelijk voor leden van de organisatie.
 - [Het profiel](https://github.com/Life-Outdoor-Living/.github/blob/main/profile/README.md)
 - [README](https://github.com/Life-Outdoor-Living/.github/blob/main/README.md): wat deze repository is
 - [CONTRIBUTING](https://github.com/Life-Outdoor-Living/.github/blob/main/CONTRIBUTING.md): hoe je een wijziging voorstelt
+- [CODE_OF_CONDUCT](https://github.com/Life-Outdoor-Living/.github/blob/main/CODE_OF_CONDUCT.md): de gedragscode, voor alle repositories van de organisatie
 - [SECURITY](https://github.com/Life-Outdoor-Living/.github/blob/main/SECURITY.md): hoe je een beveiligingsprobleem meldt
 - [LICENSE](https://github.com/Life-Outdoor-Living/.github/blob/main/LICENSE): eigendom van Life Outdoor Living International B.V.; geen licentie
 

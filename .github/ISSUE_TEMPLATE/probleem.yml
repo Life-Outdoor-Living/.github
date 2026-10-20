@@ -1,0 +1,39 @@
+name: Iets werkt niet
+description: Een fout, of iets wat anders werkt dan verwacht.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Zet hier geen wachtwoorden, sleutels, tokens of persoonsgegevens neer, ook niet gedeeltelijk.
+        Een beveiligingsprobleem meld je niet in een issue.
+  - type: textarea
+    id: wat
+    attributes:
+      label: Wat gebeurde er?
+      description: Wat zag je, en waar? Een foutmelding mag erbij, zonder geheime waarden.
+    validations:
+      required: true
+  - type: textarea
+    id: verwacht
+    attributes:
+      label: Wat had je verwacht?
+    validations:
+      required: true
+  - type: textarea
+    id: stappen
+    attributes:
+      label: Hoe gebeurt het opnieuw?
+      description: De stappen, zo precies als je kunt.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: false
+  - type: textarea
+    id: verder
+    attributes:
+      label: Verder nog iets?
+      description: Wanneer het begon, hoe vaak, wat je al geprobeerd hebt.
+    validations:
+      required: false

@@ -1,0 +1,26 @@
+name: Voorstel of wens
+description: Iets nieuws, of iets wat beter kan.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Zet hier geen wachtwoorden, sleutels, tokens of persoonsgegevens neer, ook niet gedeeltelijk.
+  - type: textarea
+    id: wat
+    attributes:
+      label: Wat stel je voor?
+    validations:
+      required: true
+  - type: textarea
+    id: waarom
+    attributes:
+      label: Waarom?
+      description: Welk probleem lost het op, of wat levert het op? Een voorbeeld uit de praktijk helpt.
+    validations:
+      required: true
+  - type: textarea
+    id: hoe
+    attributes:
+      label: Heb je al een idee hoe?
+    validations:
+      required: false

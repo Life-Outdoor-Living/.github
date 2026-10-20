@@ -1,0 +1,6 @@
+# Standaard voor elke repository van de organisatie zonder eigen .github/ISSUE_TEMPLATE.
+blank_issues_enabled: true
+contact_links:
+  - name: Beveiligingsprobleem
+    url: https://github.com/Life-Outdoor-Living
+    about: Meld het niet in een issue. Het profiel van de organisatie zegt hoe het wel moet.
