@@ -19,6 +19,12 @@ description: >-
 # De website van Life Outdoor Living, voor wie het profiel leest zonder lid te zijn.
 homepage: https://www.lifeoutdoorliving.com
 
-topics: []
+# Wat deze repository is: het profiel van de organisatie, en de standaardbestanden (CONTRIBUTING,
+# SECURITY, de PR-template) die GitHub gebruikt voor een repository zonder eigen exemplaar.
+topics:
+  - github-profile
+  - organization-profile
+  - community-health-files
+  - life-outdoor-living
 
 wiki: true
