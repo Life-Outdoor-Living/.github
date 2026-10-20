@@ -15,6 +15,8 @@ toont GitHub op de pagina van de organisatie, voor iedereen.
 | [`docs/wiki/`](docs/wiki/) | de bron van de wiki van deze repository |
 | [`.github/about.yml`](.github/about.yml) | wat GitHub onder *About* toont |
 | [`.github/CODEOWNERS`](.github/CODEOWNERS) | wie GitHub om een review vraagt op elke pull request: het team Admins |
+| [`.github/pull_request_template.md`](.github/pull_request_template.md) | de tekst waarmee elke nieuwe pull request begint |
+| [`.github/dependabot.yml`](.github/dependabot.yml) | laat Dependabot eens per maand de GitHub Actions in de workflows bijwerken |
 | [`.github/workflows/wiki.yml`](.github/workflows/wiki.yml) | zet de wiki gelijk aan `docs/wiki/` en vergelijkt *About* met `about.yml` |
 | [`.github/scripts/check_about.py`](.github/scripts/check_about.py) | de vergelijking van *About* |
 

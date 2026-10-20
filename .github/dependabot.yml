@@ -1,0 +1,20 @@
+# Dependabot-versie-updates: eens per maand. Kleine en patch-updates komen samen in één
+# pull request per ecosysteem; een major-update krijgt een eigen pull request. Alerts en
+# security-updates worden in de instellingen van de repository geregeld.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      timezone: "Europe/Amsterdam"
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "ci(deps)"
+    groups:
+      actions-minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
