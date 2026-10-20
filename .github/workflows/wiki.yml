@@ -1,0 +1,83 @@
+# De GitHub-wiki van deze repository is een weergave van docs/wiki/, geen tweede plek om te
+# schrijven. Deze workflow zet die map na elke push naar main in `<repo>.wiki.git`. Wat iemand in
+# de wiki zelf verandert, wordt bij de volgende push overschreven; wijzigen gaat met een pull
+# request, zoals al het andere hier. Overgenomen van .github/workflows/wiki.yml in
+# Life-Outdoor-Living/skills en Life-Outdoor-Living/lakehouse (2026-10-20).
+#
+# De job `about` vergelijkt de beschrijving, de homepage, de topics en de wiki-instelling van de
+# repository met .github/about.yml. Die zet een beheerder met de hand, want geen token in deze
+# repository mag de instellingen van de repository veranderen; deze job is wat het merkt als dat
+# niet (meer) klopt.
+#
+# Eenmalig, voor een beheerder: `<repo>.wiki.git` bestaat pas als iemand in de webinterface een
+# eerste wikipagina aanmaakt (tabblad Wiki, *Create the first page*, opslaan); deze job overschrijft
+# die pagina. Tot dat gebeurd is, faalt de job `publiceren` en zegt hij wat er moet gebeuren. Er is
+# bewust geen poortvariabele (Nino, 2026-10-12: geen repository variables op `_KLAAR`).
+
+name: Wiki
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - docs/wiki/**
+      - .github/about.yml
+      - .github/workflows/wiki.yml
+      - .github/scripts/check_about.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wiki
+  cancel-in-progress: false
+
+jobs:
+  publiceren:
+    name: De wiki volgt de repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write  # alleen voor de push naar <repo>.wiki.git
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Pushen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if ! git clone --depth 1 "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" "$RUNNER_TEMP/wiki_repo"; then
+            echo "::error::De wiki van ${GITHUB_REPOSITORY} is niet te klonen. Zet hem aan (Settings > General > Features > Wikis) en maak één pagina aan in de webinterface; daarna vult deze job hem bij de volgende push of met 'Run workflow'."
+            exit 1
+          fi
+          rsync -a --delete --exclude .git docs/wiki/ "$RUNNER_TEMP/wiki_repo/"
+          cd "$RUNNER_TEMP/wiki_repo"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "De wiki is al gelijk aan ${GITHUB_SHA}."
+            exit 0
+          fi
+          git commit -q -m "Wiki gelijkgezet met docs/wiki @ ${GITHUB_SHA}"
+          git push -q origin HEAD
+
+  about:
+    name: Beschrijving en topics zijn wat .github/about.yml zegt
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pyyaml
+      - name: Vergelijken
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python .github/scripts/check_about.py
