@@ -27,6 +27,7 @@ Lid van de organisatie en een vraag over toegang of data? Die beantwoorden de be
 organisatie.
 
 Heb je een beveiligingsprobleem gevonden? Meld het dan niet in een issue, pull request of reactie,
-maar rechtstreeks bij de beheerders van de organisatie, en neem een gevonden wachtwoord of sleutel
-niet over in je melding. Elke repository beschrijft in haar `SECURITY.md` hoe een melding verder
-gaat.
+maar rechtstreeks bij de beheerders van de organisatie, via
+[ai@lifeoutdoorliving.com](mailto:ai@lifeoutdoorliving.com), en neem een gevonden wachtwoord of
+sleutel niet over in je melding. Elke repository beschrijft in haar `SECURITY.md` hoe een melding
+verder gaat.

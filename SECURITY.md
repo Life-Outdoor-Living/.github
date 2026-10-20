@@ -21,8 +21,9 @@ repository; dit bestand voegt daar niets aan toe.
 een geplakte waarde is niet terug te halen: GitHub bewaart de bewerkingsgeschiedenis, en meldingen
 zijn dan al per mail verstuurd.
 
-Meld het rechtstreeks bij de beheerders van de organisatie. Ben je lid, dan vind je in de
-`SECURITY.md` van elke repository wie dat zijn en hoe je ze bereikt. Zeg:
+Meld het rechtstreeks bij de beheerders van de organisatie, per mail aan
+[ai@lifeoutdoorliving.com](mailto:ai@lifeoutdoorliving.com). Ben je lid, dan kan het ook zoals de
+`SECURITY.md` van elke repository zegt. Zeg:
 
 1. wat het is en waar het staat, zonder de waarde zelf over te nemen;
 2. wanneer je het zag;
