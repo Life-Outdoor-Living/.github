@@ -14,6 +14,7 @@ toont GitHub op de pagina van de organisatie, voor iedereen.
 | [`LICENSE`](LICENSE) | eigendom van Life Outdoor Living International B.V.; geen licentie |
 | [`docs/wiki/`](docs/wiki/) | de bron van de wiki van deze repository |
 | [`.github/about.yml`](.github/about.yml) | wat GitHub onder *About* toont |
+| [`.github/CODEOWNERS`](.github/CODEOWNERS) | wie GitHub om een review vraagt op elke pull request: het team Admins |
 | [`.github/workflows/wiki.yml`](.github/workflows/wiki.yml) | zet de wiki gelijk aan `docs/wiki/` en vergelijkt *About* met `about.yml` |
 | [`.github/scripts/check_about.py`](.github/scripts/check_about.py) | de vergelijking van *About* |
 
