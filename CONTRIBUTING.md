@@ -10,12 +10,14 @@ toont GitHub op de pagina van de organisatie, voor iedereen.
 | [`profile/README.md`](profile/README.md) | het profiel dat GitHub op de pagina van de organisatie toont |
 | [`README.md`](README.md) | wat deze repository is |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | dit bestand |
+| [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | de gedragscode; GitHub gebruikt hem ook voor elke repository van de organisatie zonder eigen gedragscode |
 | [`SECURITY.md`](SECURITY.md) | hoe je een beveiligingsprobleem meldt |
 | [`LICENSE`](LICENSE) | eigendom van Life Outdoor Living International B.V.; geen licentie |
 | [`docs/wiki/`](docs/wiki/) | de bron van de wiki van deze repository |
 | [`.github/about.yml`](.github/about.yml) | wat GitHub onder *About* toont |
 | [`.github/CODEOWNERS`](.github/CODEOWNERS) | wie GitHub om een review vraagt op elke pull request: het team Admins |
 | [`.github/pull_request_template.md`](.github/pull_request_template.md) | de tekst waarmee elke nieuwe pull request begint |
+| [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | de formulieren voor een nieuw issue; GitHub gebruikt ze ook voor elke repository van de organisatie zonder eigen issue-templates |
 | [`.github/dependabot.yml`](.github/dependabot.yml) | laat Dependabot eens per maand de GitHub Actions in de workflows bijwerken |
 | [`.github/workflows/wiki.yml`](.github/workflows/wiki.yml) | zet de wiki gelijk aan `docs/wiki/` en vergelijkt *About* met `about.yml` |
 | [`.github/scripts/check_about.py`](.github/scripts/check_about.py) | de vergelijking van *About* |
